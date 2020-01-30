@@ -1,7 +1,10 @@
 # RubyHashes
 # Part I
 def array_2_hash emails, contacts
-    # YOUR CODE HERE
+  array = {name: 'Bob smith', email: 'bobsmith@example.com'}
+  array.each do|key,value|
+  puts "Bob's #{key} is #{value}" 
+  end 
 end
 
 # Part II
