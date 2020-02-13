@@ -1,7 +1,9 @@
 module FunWithStrings
+
   def palindrome?
-    # your code here
+    self.gsub(/\W/, '').downcase == self.gsub(/\W/, '').downcase.reverse
   end
+
   def count_words
     # your code here
   end
