@@ -4,14 +4,31 @@
 </p>
  
 <p>
+  <strong>Image:</strong>
+  <% if @article.image.present? %>
+  <%= image_tag @article.image_url %>
+  <% end %> 
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+<p>
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
 
+
 <h2>Comments</h2>
-<%= render @article.comments %>
+<%= render @article.comments %> 
+
 
 <h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+<%= render "comments/form" %>
 
-<%= link_to 'Article List', articles_path %>
+
+
+<%= link_to 'Article List', articles_path %> 
+<%= link_to 'Show', article_path(@article)%>
